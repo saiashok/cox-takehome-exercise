@@ -32,7 +32,6 @@ public class VehicleCallback implements ApiCallback<VehicleResponse> {
 		if (statusCode == Application.SUCCESS_CODE) {
 			List<VehicleAnswer> vehicles = new ArrayList<VehicleAnswer>();
 			if (!callback.getMap().containsKey(result.getDealerId())) {
-				System.out.println("<<<VehicleCallback_SUCCESS>>>");
 				VehicleAnswer v = new VehicleAnswer();
 				v.setVehicleId(result.getVehicleId());
 				v.setMake(result.getMake());
@@ -48,8 +47,6 @@ public class VehicleCallback implements ApiCallback<VehicleResponse> {
 					e.printStackTrace();
 				}
 			} else {
-
-				System.out.println("<<<VehicleCallback_SUCCESS>>>");
 				vehicles = this.callback.getMap().get(result.getDealerId());
 
 				VehicleAnswer v = new VehicleAnswer();

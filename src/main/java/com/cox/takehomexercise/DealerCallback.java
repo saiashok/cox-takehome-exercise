@@ -27,8 +27,6 @@ public class DealerCallback implements ApiCallback<DealersResponse> {
 
 	@Override
 	public void onSuccess(DealersResponse result, int statusCode, Map<String, List<String>> responseHeaders) {
-
-		System.out.println("<<<DealerCallback_SUCCESS>>>");
 		if (statusCode == Application.SUCCESS_CODE) {
 			DealerAnswer dealer = new DealerAnswer();
 			dealer.setDealerId(result.getDealerId());

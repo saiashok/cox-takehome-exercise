@@ -31,7 +31,6 @@ public class VehicleIdsCallback implements ApiCallback<VehicleIdsResponse> {
 
 	@Override
 	public void onSuccess(VehicleIdsResponse result, int statusCode, Map<String, List<String>> responseHeaders) {
-		System.out.println("<<<VechicalIdCallbackSUCCESS>>>");
 		if (statusCode == Application.SUCCESS_CODE) {
 			callback.setVehicleIDs(result.getVehicleIds());
 			callback.setMap(new ConcurrentHashMap<Integer, List<VehicleAnswer>>());
